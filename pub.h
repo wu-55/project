@@ -20,8 +20,13 @@
 #define LOAD 3//登陆
 #define BREAK 4//退出
 #define HLOAD 5 //已经注册
+#define FAIL 6 //登陆失败
+#define ONLINE 7//在线人数
+#define CANCALLATION 8
+#define QUNLIAO  9
 struct msg{
     int type;
+    int count;
     char data[100];
     char name[20];
     char passwd[20];
@@ -32,4 +37,5 @@ MYSQL mysql;
 MYSQL_ROW row;
 MYSQL_RES *result;
 int flag=1;//循环判断
+int flag1=1;
 #endif
